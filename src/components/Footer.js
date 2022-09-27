@@ -1,5 +1,10 @@
+import React from 'react';
+
 export default function Footer() {
-    <div>
-        <p>&copy; Angela Soto | Image Credits</p>
-    </div>
+    return (
+        <div>
+            <p>&copy; Angela Soto | Image Credits</p>
+        </div>
+    );
+
 };

@@ -1,24 +1,26 @@
+import React from 'react';
+
 export default function Navbar({ currentPage, handlePageChange }) {
     return (
         <div>
             <ul>
                 <li className=''>
                     <a
-                    href='/'
+                    // href='/'
                     onClick={() => handlePageChange('Home')}>
                         Home
                     </a>
                 </li>
                 <li className=''>
                     <a
-                    href='/about-me'
+                    // href='/about-me'
                     onClick={() => handlePageChange('About')}>
                         About Me
                     </a>
                 </li>
                 <li className=''>
                     <a
-                    href='/work'
+                    // href='/work'
                     onClick={() => handlePageChange('Work')}
                     className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'}
                     >
@@ -27,7 +29,7 @@ export default function Navbar({ currentPage, handlePageChange }) {
                 </li>
                 <li className=''>
                     <a
-                    href='/contact-me'
+                    // href='/contact-me'
                     onClick={() => handlePageChange('Contact')}
                     className={currentPage === 'Contact Me' ? 'nav-link active' : 'nav-link'}
                     >
@@ -36,7 +38,7 @@ export default function Navbar({ currentPage, handlePageChange }) {
                 </li>
                 <li className=''>
                     <a
-                    href='/resume'
+                    // href='/resume'
                     onClick={() => handlePageChange('Resume')}
                     className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
                     >
