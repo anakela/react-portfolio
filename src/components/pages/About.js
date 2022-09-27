@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
-
 export default function About() {
-    <div>
+    return (
+        <div>
         <h2>About Me</h2>
-        <img></img>
+        {/* <img></img> */}
         <p>
             Oh, hello there! My name is Angela, but you can call me Angie. I'm a web designer/developer living in the Hawaiian islands. My goal is to create beautiful, functional, high-converting websites that are easy to use, highly navigable, and accessible to all.
         </p>
@@ -20,7 +19,8 @@ export default function About() {
             <li>Studying through UC Berkeley's Coding Bootcamp</li>
         </ul>
         <p>
-            Take a look at <Link to="/work">my work</Link>, or <Link to="/contact-me">contact me here</Link>. I look forward to working with you!
+            Take a look at <a href="/work">my work</a>, or <a href="/contact-me">contact me here</a>. I look forward to working with you!
         </p>
     </div>
-};
+    );
+}

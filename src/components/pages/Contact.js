@@ -1,5 +1,6 @@
 export default function Contact() {
-    <div>
+    return (
+        <div>
         <h2>Get in Touch</h2>
         <p>
             I love connecting with people!  Please feel free to reach out to me using any of the means below.
@@ -12,4 +13,5 @@ export default function Contact() {
         <a href="https://www.deviantart.com/red-rogue-angel" title="Check out my earlier works of art here!" target="_blank"><img id="dev-art" src="./assets/images/da-icon.png" alt="Check out my art at DA!" /></a>
         </div>
     </div>
-};
+    );
+}

@@ -1,14 +1,41 @@
-import { Link } from 'react-router-dom';
-
-export default function Navbar() {
+export default function Navbar({ currentPage, handlePageChange }) {
     return (
         <div>
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about-me">About Me</Link></li>
-                <li><Link to="/work">Work</Link></li>
-                <li><Link to="/contact-me">Contact Me</Link></li>
-                <li><Link to="/resume">Resume</Link></li>
+                <li className=''>
+                    <a
+                    href='/about-me'
+                    onClick={() => handlePageChange('About Me')}>
+                        About Me
+                    </a>
+                </li>
+                <li className=''>
+                    <a
+                    href='/work'
+                    onClick={() => handlePageChange('Work')}
+                    className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'}
+                    >
+                        Work
+                    </a>
+                </li>
+                <li className=''>
+                    <a
+                    href='/contact-me'
+                    onClick={() => handlePageChange('Contact Me')}
+                    className={currentPage === 'Contact Me' ? 'nav-link active' : 'nav-link'}
+                    >
+                        Contact Me
+                    </a>
+                </li>
+                <li className=''>
+                    <a
+                    href='/resume'
+                    onClick={() => handlePageChange('Resume')}
+                    className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
+                    >
+                        Resume
+                    </a>
+                </li>
             </ul>
         </div>
     );

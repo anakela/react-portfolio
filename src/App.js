@@ -1,11 +1,10 @@
 import PortfolioContainer from "./components/PortfolioContainer";
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      <Header />
       <PortfolioContainer />
-      <Footer />
     </div>
   );
 }
