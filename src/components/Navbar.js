@@ -4,8 +4,15 @@ export default function Navbar({ currentPage, handlePageChange }) {
             <ul>
                 <li className=''>
                     <a
+                    href='/'
+                    onClick={() => handlePageChange('Home')}>
+                        Home
+                    </a>
+                </li>
+                <li className=''>
+                    <a
                     href='/about-me'
-                    onClick={() => handlePageChange('About Me')}>
+                    onClick={() => handlePageChange('About')}>
                         About Me
                     </a>
                 </li>
@@ -21,7 +28,7 @@ export default function Navbar({ currentPage, handlePageChange }) {
                 <li className=''>
                     <a
                     href='/contact-me'
-                    onClick={() => handlePageChange('Contact Me')}
+                    onClick={() => handlePageChange('Contact')}
                     className={currentPage === 'Contact Me' ? 'nav-link active' : 'nav-link'}
                     >
                         Contact Me

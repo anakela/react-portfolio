@@ -11,7 +11,7 @@ export default function Work() {
                 </div>
             </a>
 
-            <div class="proj-wrapper">
+            <div className="proj-wrapper">
                 <a href="https://github.com/anakela/homework-1" title="Homework 1 - HTML CSS Git Challenge: Code Refactor" target="_blank">
                     <div className="flex-container flex-2" id="project2">
                         <h3>#2 - HTML CSS Git Challenge: Code Refactor</h3>
@@ -30,7 +30,7 @@ export default function Work() {
                     </div>
                 </a>
 
-                <a href="javascript:void(0);" title="_self" target="_blank">
+                <a /*href="javascript:void(0);"*/ title="_self" target="_blank">
                     <div className="flex-container flex-5" id="project5">
                         <h3>#5 - Upcoming Project 5</h3>
                     </div>

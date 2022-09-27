@@ -1,21 +1,21 @@
 import { useState } from "react";
 
 // import Header from "./Header";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
-// import Resume from "./pages/Resume";
+import Resume from "./pages/Resume";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 export default function PortfolioContainer() {
-    const [currentPage, setCurrentPage] = useState('About');
+    const [currentPage, setCurrentPage] = useState('Home');
 
     const renderPage = () => {
-        // if (currentPage === 'Home') {
-        //     return <Home />;
-        // }
+        if (currentPage === 'Home') {
+            return <Home />;
+        }
 
         if (currentPage === 'About') {
             return <About />;
@@ -29,7 +29,7 @@ export default function PortfolioContainer() {
             return <Contact />;
         }
 
-        // return <Resume />;
+        return <Resume />;
     };
 
     const handlePageChange = (page) => setCurrentPage(page);
