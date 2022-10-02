@@ -1,51 +1,59 @@
-import React from 'react';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 
-export default function Navbar({ currentPage, handlePageChange }) {
+export default function Navbar({ handlePageChange }) {
     return (
-        <div>
-            <ul>
-                <li className=''>
-                    <a
-                    // href='/'
-                    onClick={() => handlePageChange('Home')}>
-                        Home
-                    </a>
-                </li>
-                <li className=''>
-                    <a
-                    // href='/about-me'
-                    onClick={() => handlePageChange('About')}>
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static">
+                <Toolbar>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="menu"
+                        sx={{ mr: 2 }}
+                    >
+                        {/* <MenuIcon /> */}
+                    </IconButton>
+                    <Typography
+                        variant="h6"
+                        component="div"
+                        sx={{ flexGrow: 1 }}
+                        onClick={() => handlePageChange('About')}
+                    >
+                        Angela's Portfolio
+                    </Typography>
+                    <Button
+                        color="inherit"
+                        onClick={() => handlePageChange('About')}
+                    >
                         About Me
-                    </a>
-                </li>
-                <li className=''>
-                    <a
-                    // href='/work'
-                    onClick={() => handlePageChange('Work')}
-                    className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'}
+                    </Button>
+                    <Button
+                        color="inherit"
+                        onClick={() => handlePageChange('Work')}
                     >
                         Work
-                    </a>
-                </li>
-                <li className=''>
-                    <a
-                    // href='/contact-me'
-                    onClick={() => handlePageChange('Contact')}
-                    className={currentPage === 'Contact Me' ? 'nav-link active' : 'nav-link'}
+                    </Button>
+                    <Button
+                        color="inherit"
+                        onClick={() => handlePageChange('Contact')}
                     >
                         Contact Me
-                    </a>
-                </li>
-                <li className=''>
-                    <a
-                    // href='/resume'
-                    onClick={() => handlePageChange('Resume')}
-                    className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
+                    </Button>
+                    <Button
+                        color="inherit"
+                        onClick={() => handlePageChange('Resume')}
                     >
                         Resume
-                    </a>
-                </li>
-            </ul>
-        </div>
+                    </Button>
+                </Toolbar>
+            </AppBar>
+        </Box>
     );
-};
+}
