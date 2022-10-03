@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import '../styles/root.css';
 
 export default function Navbar({ handlePageChange }) {
     return (
@@ -26,7 +27,7 @@ export default function Navbar({ handlePageChange }) {
                         sx={{ flexGrow: 1 }}
                         onClick={() => handlePageChange('About')}
                     >
-                        Angela's Portfolio
+                        Angela Soto's Portfolio
                     </Typography>
                     <Button
                         color="inherit"

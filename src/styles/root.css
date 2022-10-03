@@ -1,0 +1,19 @@
+:root {
+    --light-pink: #EDCED6;
+    --dark-pink: #E6999F;
+    --light-green: #93CCB3;
+    --dark-green: #7DAF93;
+    --light-purp: #DDD2F4;
+    --dark-purp: #C3A6DC;
+    --light-yell: #EDB383;
+    --dark-yell: #E88555;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+}

@@ -1,41 +1,139 @@
 import * as React from 'react';
 import Card from '@mui/joy/Card';
-import CardCover from '@mui/joy/CardCover';
+import { CardMedia } from '@mui/material';
+import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
-import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
 import NaNarWord from '../images/projects/nanarwhal-1200px.jpg';
+import Freakimono from '../images/projects/freakimono.jpg';
+import Refactor from '../images/projects/html-refactoring.png';
+import Weather from '../images/projects/weather-dashboard.png';
+import NoSQL from '../images/projects/nosql.png';
+import Blog from '../images/projects/mvc-tech-blog.png';
 
 export default function Work() {
-  return (
-    <Card sx={{ minHeight: '280px', minWidth: 320 }}>
-      <CardCover>
-        <img
-          src={NaNarWord}
-          alt=""
-        />
-      </CardCover>
-      <CardCover
-        sx={{
-          background:
-            'linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0) 200px), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 300px)',
-        }}
-      />
-      <CardContent sx={{ justifyContent: 'flex-end' }}>
-        <Typography level="h2" fontSize="lg" textColor="#fff" mb={1}>
-          Yosemite National Park
-        </Typography>
-        <Typography
-          startDecorator={<LocationOnRoundedIcon />}
-          textColor="neutral.300"
-        >
-          California, USA
-        </Typography>
-      </CardContent>
-    </Card>
-  );
+    return (
+        <div>
+            <h2>My Work</h2>
+            <Card sx={{ minWidth: 345, maxWidth: 1200 }}>
+                <CardActionArea
+                    href="https://github.com/NaNifer/NaNarWord-word-game"
+                    target="_blank"
+                    rel='noopener noreferrer'
+                >
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        image={NaNarWord}
+                        alt="NaNarWORD Game by Team NaNarwhal"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            NaNarWORD Game by Team NaNarwhal
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+
+            <Card sx={{ minWidth: 345, maxWidth: 600 }}>
+                <CardActionArea
+                    href="https://github.com/Team-Narwhal/My_Pet"
+                    target="_blank"
+                    rel='noopener noreferrer'
+                >
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        image={Freakimono}
+                        alt="Freakimono by Team NaNarwhal"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            Freakimono by Team NaNarwhal
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+
+            <Card sx={{ minWidth: 345, maxWidth: 600 }}>
+                <CardActionArea
+                    href="https://github.com/anakela/nosql-social-network-api"
+                    target="_blank"
+                    rel='noopener noreferrer'
+                >
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        image={NoSQL}
+                        alt="NoSQL Social Network API"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            NoSQL Social Network API
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+
+            <Card sx={{ minWidth: 345, maxWidth: 600 }}>
+                <CardActionArea
+                    href="https://github.com/anakela/weather-dashboard"
+                    target="_blank"
+                    rel='noopener noreferrer'
+                >
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        image={Weather}
+                        alt="Server-Side APIs - Weather Dashboard"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            Server-Side APIs - Weather Dashboard
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+
+            <Card sx={{ minWidth: 345, maxWidth: 600 }}>
+                <CardActionArea
+                    href="https://github.com/anakela/mvc-tech-blog"
+                    target="_blank"
+                    rel='noopener noreferrer'
+                >
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        image={Blog}
+                        alt="MVC Tech Blog"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            MVC Tech Blog
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        </div>
+    );
 }
 
+// https://github.com/anakela/mvc-tech-blog
 
 // export default function Work() {
 //     return (

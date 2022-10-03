@@ -1,10 +1,14 @@
 import React from 'react';
+import Angie from '../images/angie-370px.png';
 
 export default function About() {
     return (
         <div>
             <h2>About Me</h2>
-            {/* <img></img> */}
+            <img 
+            src={Angie}
+            alt="This is me!"
+            sx={{ float: 'right', margin: '10px', borderRadius: '50px' }}/>
             <p>
                 Oh, hello there! My name is Angela, but you can call me Angie. I'm a web designer/developer living in the Hawaiian islands. My goal is to create beautiful, functional, high-converting websites that are easy to use, highly navigable, and accessible to all.
             </p>
