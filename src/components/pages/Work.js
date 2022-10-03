@@ -6,16 +6,15 @@ import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import NaNarWord from '../images/projects/nanarwhal-1200px.jpg';
 import Freakimono from '../images/projects/freakimono.jpg';
-import Refactor from '../images/projects/html-refactoring.png';
 import Weather from '../images/projects/weather-dashboard.png';
 import NoSQL from '../images/projects/nosql.png';
 import Blog from '../images/projects/mvc-tech-blog.png';
 
 export default function Work() {
     return (
-        <div>
+        <div className='main-container'>
             <h2>My Work</h2>
-            <Card sx={{ minWidth: 345, maxWidth: 1200 }}>
+            <Card sx={{ minWidth: 345, maxWidth: 1200, borderRadius: 10 }}>
                 <CardActionArea
                     href="https://github.com/NaNifer/NaNarWord-word-game"
                     target="_blank"

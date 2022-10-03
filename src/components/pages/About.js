@@ -3,7 +3,7 @@ import Angie from '../images/angie-370px.png';
 
 export default function About() {
     return (
-        <div>
+        <div className='main-container'>
             <h2>About Me</h2>
             <img 
             src={Angie}

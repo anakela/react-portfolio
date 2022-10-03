@@ -7,7 +7,7 @@ import DA from '../images/logos/da-icon.png';
 
 export default function Contact() {
     return (
-        <div>
+        <div className='main-container'>
             <h2>Get in Touch</h2>
             <p>
                 I love connecting with people!  Please feel free to reach out to me using any of the means below.

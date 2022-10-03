@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Resume() {
     return (
-      <div>
+      <div className='main-container'>
         <h2>Resume</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque

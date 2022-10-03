@@ -32,10 +32,10 @@ export default function Footer() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Paper square sx={{ pb: '50px' }}>
-        <Typography variant="h5" gutterBottom component="div" sx={{ p: 2, pb: 0 }}>
+      {/* <Paper square sx={{ pb: '50px' }}> */}
+        {/* <Typography variant="h5" gutterBottom component="div" sx={{ p: 2, pb: 0 }}>
           Inbox
-        </Typography>
+        </Typography> */}
         {/* <List sx={{ mb: 2 }}>
           {messages.map(({ id, primary, secondary, person }) => (
             <React.Fragment key={id}>
@@ -60,22 +60,22 @@ export default function Footer() {
             </React.Fragment>
           ))}
         </List> */}
-      </Paper>
+      {/* </Paper> */}
       <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
-          <IconButton color="inherit" aria-label="open drawer">
+          {/* <IconButton color="inherit" aria-label="open drawer">
             <MenuIcon />
           </IconButton>
           <StyledFab color="secondary" aria-label="add">
             <AddIcon />
-          </StyledFab>
-          <Box sx={{ flexGrow: 1 }} />
-          <IconButton color="inherit">
+          </StyledFab> */}
+          {/* <Box sx={{ flexGrow: 1 }} /> */}
+          {/* <IconButton color="inherit">
             <SearchIcon />
-          </IconButton>
-          <IconButton color="inherit">
+          </IconButton> */}
+          {/* <IconButton color="inherit">
             <MoreIcon />
-          </IconButton>
+          </IconButton> */}
         </Toolbar>
       </AppBar>
     </React.Fragment>
