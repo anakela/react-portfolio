@@ -5,10 +5,16 @@ export default function About() {
     return (
         <div className='main-container'>
             <h2>About Me</h2>
-            <img 
-            src={Angie}
-            alt="This is me!"
-            sx={{ float: 'right', margin: '10px', borderRadius: '50px' }}/>
+            <div
+                style={{ display: 'flex', float: 'right', borderRadius: '50%' }}
+            >
+                <img
+                    id="profilePhoto"
+                    src={Angie}
+                    alt="This is me!"
+                    sx={{  borderRadius: '50%' }}
+                />
+            </div>
             <p>
                 Oh, hello there! My name is Angela, but you can call me Angie. I'm a web designer/developer living in the Hawaiian islands. My goal is to create beautiful, functional, high-converting websites that are easy to use, highly navigable, and accessible to all.
             </p>
@@ -25,7 +31,7 @@ export default function About() {
                 <li>Studying through UC Berkeley's Coding Bootcamp</li>
             </ul>
             <p>
-                Take a look at <a href="/work">my work</a>, or <a href="/contact-me">contact me here</a>. I look forward to working with you!
+                Take a look at <a href="/work" title="See my work here.">my work</a>, or <a href="/contact-me">contact me here</a>. I look forward to working with you!
             </p>
         </div>
     );

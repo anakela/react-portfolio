@@ -8,8 +8,8 @@ import '../styles/root.css';
 
 export default function Navbar({ handlePageChange }) {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+        <Box sx={{ flexGrow: 1, marginBottom: 10 }} >
+            <AppBar position="static" id="navbar">
                 <Toolbar>
                     {/* <IconButton
                         size="large"
@@ -24,6 +24,8 @@ export default function Navbar({ handlePageChange }) {
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1 }}
+                        fontFamily="Lobster, cursive"
+                        fontSize="48px"
                         onClick={() => handlePageChange('About')}
                     >
                         Angela Soto's Portfolio

@@ -22,13 +22,14 @@ export default function PortfolioContainer() {
             return <Contact />;
         }
 
-        return <About />;
+        // return <About />;
+        return <Work />;
     };
 
     const handlePageChange = (page) => setCurrentPage(page);
 
     return (
-        <div>
+        <div id="portfolioContainer">
             <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
             {renderPage()}
             <Footer />

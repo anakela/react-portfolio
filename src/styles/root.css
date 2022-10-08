@@ -13,14 +13,38 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+#navbar {
+    background: linear-gradient(to right, var(--dark-yell), var(--light-yell));
+}
+
+#navbar a:active, #navbar a:hover {
+    font-weight: bold;
+}
+
 h1, h2 {
     font-family: 'Lobster', cursive;
     font-size: 40px;
 }
 
 .main-container {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-left: 50px;
     margin-bottom: 50px;
     margin-right: 50px;
+    /* background-color: var(--light-yell); */
+}
+
+#portfolioContainer {
+    margin-bottom: 100px;
+    /* background: var(--light-green); */
+}
+
+#profilePhoto {
+    border-radius: 50%;
+    float: 'right';
+    margin: '10px';
+}
+
+.card {
+    background: #fff;
 }
