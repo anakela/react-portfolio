@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Card from '@mui/joy/Card';
-import { CardMedia, Grid, Paper } from '@mui/material';
+import { CardMedia, Grid } from '@mui/material';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
@@ -16,12 +16,11 @@ export default function Work() {
         <div className='main-container'>
             <h2 id="work-header">My Work</h2>
             <Grid container spacing={{ xs: 4, md: 3}} style={{ justifyContent: "center" }}>
-                {/* <Paper elevation={3} sx={{ padding: 1, marginTop: 3, justifyContent: "center" }}> */}
-                <Grid item xs={12}>
+                <Grid item md={6}>
                     <Card
                         variant="outlined"
                         className="card"
-                        sx={{ minWidth: 345, maxWidth: '100%', borderRadius: '10px', width: '100%' }}
+                        sx={{ minWidth: 345, borderRadius: '10px', width: '100%' }}
                         style={{ border: "5px solid var(--dark-purp)" }}
                     >
                         <CardActionArea
@@ -31,7 +30,7 @@ export default function Work() {
                         >
                             <CardMedia
                                 component="img"
-                                height="300"
+                                height="200"
                                 image={BoneBuddies}
                                 alt="Bone Buddies by Team Turcrickeseal"
                             />
@@ -161,7 +160,6 @@ export default function Work() {
                         </CardActionArea>
                     </Card>
                 </Grid>
-                {/* </Paper> */}
             </Grid>
         </div>
     );
