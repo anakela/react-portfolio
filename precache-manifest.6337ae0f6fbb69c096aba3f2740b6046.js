@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "01f2af4d9e3885993121",
-    "url": "/react-portfolio/static/css/main.3eaaae00.chunk.css"
+    "revision": "0ff9f512dd769c6f8a74",
+    "url": "/react-portfolio/static/css/main.dff7259f.chunk.css"
   },
   {
-    "revision": "01f2af4d9e3885993121",
-    "url": "/react-portfolio/static/js/main.01f2af4d.chunk.js"
+    "revision": "0ff9f512dd769c6f8a74",
+    "url": "/react-portfolio/static/js/main.0ff9f512.chunk.js"
   },
   {
-    "revision": "ad39ee43e5f1e39ec27e",
-    "url": "/react-portfolio/static/js/1.ad39ee43.chunk.js"
+    "revision": "4620c4dd021471bddc6d",
+    "url": "/react-portfolio/static/js/1.4620c4dd.chunk.js"
   },
   {
-    "revision": "6a0e282bac13597365a0",
-    "url": "/react-portfolio/static/js/2.6a0e282b.chunk.js"
+    "revision": "2066f19737fe65628bd8",
+    "url": "/react-portfolio/static/js/2.2066f197.chunk.js"
   },
   {
-    "revision": "079c2b40f592520760c6",
-    "url": "/react-portfolio/static/js/runtime~main.079c2b40.js"
+    "revision": "440240b99c610025fcfd",
+    "url": "/react-portfolio/static/js/runtime~main.440240b9.js"
   },
   {
     "revision": "a30f8c49aa500dcca83eea2ad396ca46",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/react-portfolio/static/media/bone-buddies-logo.cdec2f5a.png"
   },
   {
-    "revision": "aa580127b41223caba1103c9f54ebe40",
+    "revision": "75fe24c0adec7ae5351c1bf07a8dbcc1",
     "url": "/react-portfolio/index.html"
   }
 ];
