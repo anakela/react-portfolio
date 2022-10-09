@@ -14,8 +14,8 @@ export default function PortfolioContainer() {
             return <Resume />;
         }
 
-        if (currentPage === 'Work') {
-            return <Work />;
+        if (currentPage === 'About') {
+            return <About />;
         }
 
         if (currentPage === 'Contact') {

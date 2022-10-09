@@ -9,16 +9,18 @@
     --dark-yell: #E88555;
 }
 
-body {
+body p, ul, li {
     font-family: 'Poppins', sans-serif;
-    background: #f4caa7;
+    /* background: #f4caa7; */
 }
 
 #navbar {
     background: linear-gradient(to right, var(--dark-yell), var(--light-yell));
+    border-bottom: 5px solid #000;
 }
 
-#navbar a:active, #navbar a:hover {
+#navbar a:active,
+#navbar a:hover {
     font-weight: bold;
 }
 
@@ -26,8 +28,16 @@ body {
     width: "200px";
 }
 
-h1, h2 {
-    font-family: 'Lobster', cursive;
+/* #footer {
+    margin-top: 100px;
+} */
+
+h1,
+h2 {
+    font-family: reklame-script, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    /* font-family: 'Lobster', cursive; */
     font-size: 32px;
 }
 
@@ -35,7 +45,13 @@ h1, h2 {
     margin: 0 50px;
 }
 
+#profilePhoto {
+    border: 5px solid var(--dark-purp);
+
+}
+
 #portfolioContainer {
+    /* margin: 50px; */
     margin-bottom: 100px;
     /* background: var(--light-green); */
 }
@@ -48,4 +64,18 @@ h1, h2 {
 
 .card {
     background: #fff;
+}
+
+.card p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card h3 {
+    font-family: reklame-script, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.card:hover {
+    border: 5px solid var(--dark-green);
 }

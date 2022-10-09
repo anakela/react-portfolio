@@ -8,7 +8,7 @@ import '../styles/root.css';
 
 export default function Navbar({ handlePageChange }) {
     return (
-        <Box sx={{ flexGrow: 1, marginBottom: 10, width: "100%" }} >
+        <Box sx={{ flexGrow: 1,  width: "100%" }} >
             <AppBar position="static" id="navbar">
                 <Toolbar>
                     {/* <IconButton
@@ -24,15 +24,17 @@ export default function Navbar({ handlePageChange }) {
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1 }}
-                        fontFamily="Lobster, cursive"
-                        color="black"
+                        fontFamily="reklame-script, sans-serif"
+                        fontWeight="700"
+                        fontStyle="normal"
+                        // color="black"
                         fontSize="36px"
                         onClick={() => handlePageChange('About')}
                     >
                         Angela Soto's Portfolio
                     </Typography>
                     <div
-                    style={{ display: "flex", justifyContent: "space-evenly", alignContent: "center"}}
+                        style={{ display: "flex", justifyContent: "space-evenly", alignContent: "center" }}
                     >
                         <Button
                             color="inherit"
