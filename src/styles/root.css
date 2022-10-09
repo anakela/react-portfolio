@@ -9,7 +9,9 @@
     --dark-yell: #E88555;
 }
 
-body p, ul, li {
+body p,
+ul,
+li {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -43,7 +45,8 @@ body p, ul, li {
     line-height: 3;
 } */
 
-#nav-logo:hover, #nav-logo:active {
+#nav-logo:hover,
+#nav-logo:active {
     color: #000;
 }
 
@@ -70,11 +73,17 @@ body p, ul, li {
     text-align: center;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: reklame-script, sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 32px;
+}
+
+h2 {
+    border-radius: 10px;
+    padding-left: 15px;
 }
 
 .main-container {
@@ -82,7 +91,7 @@ h1, h2 {
 }
 
 #profilePhoto {
-    border: 5px solid var(--dark-purp);
+    border: 5px solid var(--light-green);
 
 }
 
@@ -128,6 +137,22 @@ h1, h2 {
 
 #dev-art {
     border: 3px solid var(--dark-purp);
+}
+
+#about-header {
+    background-image: linear-gradient(to right, var(--light-green), rgba(255, 0, 0, 0));
+}
+
+#work-header {
+    background-image: linear-gradient(to right, var(--dark-purp), rgba(255, 0, 0, 0));
+}
+
+#contact-header {
+    background-image: linear-gradient(to right, var(--dark-yell), rgba(255, 0, 0, 0));
+}
+
+#resume-header {
+    background-image: linear-gradient(to right, var(--dark-pink), rgba(255,0,0,0));
 }
 
 .card {
