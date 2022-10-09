@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e0bd46c7623bd8296ffb",
-    "url": "/react-portfolio/static/css/main.a7d48e48.chunk.css"
+    "revision": "01f2af4d9e3885993121",
+    "url": "/react-portfolio/static/css/main.3eaaae00.chunk.css"
   },
   {
-    "revision": "e0bd46c7623bd8296ffb",
-    "url": "/react-portfolio/static/js/main.e0bd46c7.chunk.js"
+    "revision": "01f2af4d9e3885993121",
+    "url": "/react-portfolio/static/js/main.01f2af4d.chunk.js"
   },
   {
     "revision": "ad39ee43e5f1e39ec27e",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/react-portfolio/static/media/bone-buddies-logo.cdec2f5a.png"
   },
   {
-    "revision": "6bfadb867dc45d089d6a4b4fdd556eae",
+    "revision": "aa580127b41223caba1103c9f54ebe40",
     "url": "/react-portfolio/index.html"
   }
 ];

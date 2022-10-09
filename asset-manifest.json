@@ -1,7 +1,7 @@
 {
-  "main.css": "/react-portfolio/static/css/main.a7d48e48.chunk.css",
-  "main.js": "/react-portfolio/static/js/main.e0bd46c7.chunk.js",
-  "main.js.map": "/react-portfolio/static/js/main.e0bd46c7.chunk.js.map",
+  "main.css": "/react-portfolio/static/css/main.3eaaae00.chunk.css",
+  "main.js": "/react-portfolio/static/js/main.01f2af4d.chunk.js",
+  "main.js.map": "/react-portfolio/static/js/main.01f2af4d.chunk.js.map",
   "static/js/1.ad39ee43.chunk.js": "/react-portfolio/static/js/1.ad39ee43.chunk.js",
   "static/js/1.ad39ee43.chunk.js.map": "/react-portfolio/static/js/1.ad39ee43.chunk.js.map",
   "static/js/2.6a0e282b.chunk.js": "/react-portfolio/static/js/2.6a0e282b.chunk.js",
@@ -14,8 +14,8 @@
   "static/media/nosql.png": "/react-portfolio/static/media/nosql.e0353408.png",
   "static/media/mvc-tech-blog.png": "/react-portfolio/static/media/mvc-tech-blog.e54e407e.png",
   "static/media/bone-buddies-logo.png": "/react-portfolio/static/media/bone-buddies-logo.cdec2f5a.png",
-  "static/css/main.a7d48e48.chunk.css.map": "/react-portfolio/static/css/main.a7d48e48.chunk.css.map",
+  "static/css/main.3eaaae00.chunk.css.map": "/react-portfolio/static/css/main.3eaaae00.chunk.css.map",
   "index.html": "/react-portfolio/index.html",
-  "precache-manifest.569e21c680b21b8dea62e94d411e1a2e.js": "/react-portfolio/precache-manifest.569e21c680b21b8dea62e94d411e1a2e.js",
+  "precache-manifest.19a9b1c309de22c69253ad4c838a22fb.js": "/react-portfolio/precache-manifest.19a9b1c309de22c69253ad4c838a22fb.js",
   "service-worker.js": "/react-portfolio/service-worker.js"
 }
