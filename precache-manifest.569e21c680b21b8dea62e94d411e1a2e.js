@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "e4b6b8eb5a47c803113e",
-    "url": "/react-portfolio/static/css/main.32df713e.chunk.css"
+    "revision": "e0bd46c7623bd8296ffb",
+    "url": "/react-portfolio/static/css/main.a7d48e48.chunk.css"
   },
   {
-    "revision": "e4b6b8eb5a47c803113e",
-    "url": "/react-portfolio/static/js/main.e4b6b8eb.chunk.js"
+    "revision": "e0bd46c7623bd8296ffb",
+    "url": "/react-portfolio/static/js/main.e0bd46c7.chunk.js"
   },
   {
     "revision": "ad39ee43e5f1e39ec27e",
     "url": "/react-portfolio/static/js/1.ad39ee43.chunk.js"
   },
   {
-    "revision": "75cd2f2719bbe9ece27b",
-    "url": "/react-portfolio/static/js/2.75cd2f27.chunk.js"
+    "revision": "6a0e282bac13597365a0",
+    "url": "/react-portfolio/static/js/2.6a0e282b.chunk.js"
   },
   {
     "revision": "079c2b40f592520760c6",
@@ -32,10 +32,6 @@ self.__precacheManifest = [
     "url": "/react-portfolio/static/media/freakimono.ff7b65d4.jpg"
   },
   {
-    "revision": "38a93236efa2dc1ce47281e4923d62ca",
-    "url": "/react-portfolio/static/media/weather-dashboard.38a93236.png"
-  },
-  {
     "revision": "e03534084af2eef37892e44548857eae",
     "url": "/react-portfolio/static/media/nosql.e0353408.png"
   },
@@ -44,7 +40,11 @@ self.__precacheManifest = [
     "url": "/react-portfolio/static/media/mvc-tech-blog.e54e407e.png"
   },
   {
-    "revision": "7697a309a9ddb3d23ba9c7cac1b23f9e",
+    "revision": "cdec2f5adb0df4e4588ab5333ac716bb",
+    "url": "/react-portfolio/static/media/bone-buddies-logo.cdec2f5a.png"
+  },
+  {
+    "revision": "6bfadb867dc45d089d6a4b4fdd556eae",
     "url": "/react-portfolio/index.html"
   }
 ];
