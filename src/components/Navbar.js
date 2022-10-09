@@ -8,7 +8,7 @@ import '../styles/root.css';
 
 export default function Navbar({ handlePageChange }) {
     return (
-        <Box sx={{ flexGrow: 1, marginBottom: 10 }} >
+        <Box sx={{ flexGrow: 1, marginBottom: 10, width: "100%" }} >
             <AppBar position="static" id="navbar">
                 <Toolbar>
                     {/* <IconButton
@@ -18,42 +18,47 @@ export default function Navbar({ handlePageChange }) {
                         aria-label="menu"
                         sx={{ mr: 2 }}
                     > */}
-                        {/* <MenuIcon /> */}
+                    {/* <MenuIcon /> */}
                     {/* </IconButton> */}
                     <Typography
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1 }}
                         fontFamily="Lobster, cursive"
-                        fontSize="48px"
+                        color="black"
+                        fontSize="36px"
                         onClick={() => handlePageChange('About')}
                     >
                         Angela Soto's Portfolio
                     </Typography>
-                    <Button
-                        color="inherit"
-                        onClick={() => handlePageChange('About')}
+                    <div
+                    style={{ display: "flex", justifyContent: "space-evenly", alignContent: "center"}}
                     >
-                        About Me
-                    </Button>
-                    <Button
-                        color="inherit"
-                        onClick={() => handlePageChange('Work')}
-                    >
-                        Work
-                    </Button>
-                    <Button
-                        color="inherit"
-                        onClick={() => handlePageChange('Contact')}
-                    >
-                        Contact Me
-                    </Button>
-                    <Button
-                        color="inherit"
-                        onClick={() => handlePageChange('Resume')}
-                    >
-                        Resume
-                    </Button>
+                        <Button
+                            color="inherit"
+                            onClick={() => handlePageChange('About')}
+                        >
+                            About Me
+                        </Button>
+                        <Button
+                            color="inherit"
+                            onClick={() => handlePageChange('Work')}
+                        >
+                            Work
+                        </Button>
+                        <Button
+                            color="inherit"
+                            onClick={() => handlePageChange('Contact')}
+                        >
+                            Contact Me
+                        </Button>
+                        <Button
+                            color="inherit"
+                            onClick={() => handlePageChange('Resume')}
+                        >
+                            Resume
+                        </Button>
+                    </div>
                 </Toolbar>
             </AppBar>
         </Box>
