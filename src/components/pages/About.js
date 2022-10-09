@@ -4,7 +4,7 @@ import Angie from '../images/angie-370px.png';
 export default function About() {
     return (
         <div className='main-container'>
-            <h2>About Me</h2>
+            <h2 id="about-header">About Me</h2>
             <div
                 style={{ display: 'flex', float: 'right', borderRadius: '50%' }}
             >
@@ -16,7 +16,7 @@ export default function About() {
                 />
             </div>
             <p>
-                Oh, hello there! My name is Angela, but you can call me Angie. I'm a web designer/developer living in the Hawaiian islands. My goal is to create beautiful, functional, high-converting websites that are easy to use, highly navigable, and accessible to all.
+                Oh, hello there! 👋 My name is Angela, but you can call me Angie. I'm a web designer/developer living in the Hawaiian islands. My goal is to create beautiful, functional, high-converting websites that are easy to use, highly navigable, and accessible to all.
             </p>
             <p>
                 My journey toward web design and development began early. Growing up, I loved drawing, which I did all the time. In addition to art, I was also fascinated with technology. I loved gadgets and video games and understanding how they worked. When the Internet became widely available, I found that my technological allure extended to websites and how they were designed. I would spend hours designing layouts and breaking them down into HTML.
@@ -31,7 +31,7 @@ export default function About() {
                 <li>Studying through UC Berkeley's Coding Bootcamp</li>
             </ul>
             <p>
-                Take a look at <a href="/work" title="See my work here.">my work</a>, or <a href="/contact-me">contact me here</a>. I look forward to working with you!
+                Take a look at my work, or contact me. I look forward to working with you!
             </p>
         </div>
     );

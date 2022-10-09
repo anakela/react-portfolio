@@ -3,7 +3,7 @@ import React from 'react';
 export default function Resume() {
     return (
       <div className='main-container'>
-        <h2>Resume</h2>
+        <h2 id="resume-header">Resume</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
           velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi

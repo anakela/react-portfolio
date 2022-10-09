@@ -35,7 +35,7 @@ export default function Navbar({ handlePageChange }) {
                         Angela Soto's Portfolio
                     </Typography>
                     <div
-                        style={{ display: "flex", justifyContent: "space-evenly", alignContent: "center", fontWeight: "bold" }}
+                        style={{ display: "flex", direction: "row", flexWrap: "wrap", justifyContent: "space-evenly", alignContent: "center", fontWeight: "bold" }}
                     >
                         <Button
                             color="inherit"
@@ -45,9 +45,9 @@ export default function Navbar({ handlePageChange }) {
                         </Button>
                         <Button
                             color="inherit"
-                            onClick={() => handlePageChange('Work')}
+                            onClick={() => handlePageChange('Portfolio')}
                         >
-                            Work
+                            Portfolio
                         </Button>
                         <Button
                             color="inherit"
