@@ -17,9 +17,7 @@ export default function Work() {
             <h2>My Work</h2>
             <Grid container spacing={4} style={{ justifyContent: "center" }}>
                 {/* <Paper elevation={3} sx={{ padding: 1, marginTop: 3, justifyContent: "center" }}> */}
-                <Grid item
-                    md={12}
-                >
+                <Grid item xs={12}>
                     <Card
                         variant="outlined"
                         className="card"

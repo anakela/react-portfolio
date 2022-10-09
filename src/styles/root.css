@@ -9,35 +9,59 @@
     --dark-yell: #E88555;
 }
 
-body p, ul, li {
+body p,
+ul,
+li {
     font-family: 'Poppins', sans-serif;
     /* background: #f4caa7; */
 }
 
 #navbar {
-    background: linear-gradient(to right, var(--dark-yell), var(--light-yell));
+    background: linear-gradient(to right,
+            var(--dark-pink),
+            var(--dark-yell),
+            var(--dark-green),
+            var(--dark-purp));
     border-bottom: 5px solid #000;
 }
 
-#navbar a:active,
-#navbar a:hover {
-    font-weight: bold;
+#navbar button:active,
+#navbar button:hover {
+    font-family: reklame-script, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background: #000;
 }
 
 #navbar button {
-    width: "200px";
+    width: "250px";
+    font-family: 'Poppins', sans-serif;
 }
 
-/* #footer {
-    margin-top: 100px;
-} */
+#nav-logo:hover, #nav-logo:active {
+    color: #000;
+}
+
+#footer {
+    background: linear-gradient(to right,
+            var(--dark-pink),
+            var(--dark-yell),
+            var(--dark-green),
+            var(--dark-purp));
+    border-top: 5px solid #000;
+}
+
+#footer p {
+    font-family: reklame-script, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
 
 h1,
 h2 {
     font-family: reklame-script, sans-serif;
     font-weight: 700;
     font-style: normal;
-    /* font-family: 'Lobster', cursive; */
     font-size: 32px;
 }
 
@@ -74,6 +98,8 @@ h2 {
     font-family: reklame-script, sans-serif;
     font-weight: 500;
     font-style: normal;
+    font-size: 28px;
+    text-align: center;
 }
 
 .card:hover {
