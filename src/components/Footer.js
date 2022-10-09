@@ -19,6 +19,11 @@ import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
 import MoreIcon from '@mui/icons-material/MoreVert';
 
+import Email from './images/logos/email-icon.png';
+import LinkedIn from './images/logos/li-icon.png';
+import GitHub from './images/logos/gh-icon.png';
+import DA from './images/logos/da-icon.png';
+
 const StyledFab = styled(Fab)({
   position: 'absolute',
   // zIndex: 1,
@@ -33,10 +38,10 @@ export default function Footer() {
     <React.Fragment>
       <CssBaseline />
       {/* <Paper square sx={{ pb: '50px' }}> */}
-        {/* <Typography variant="h5" gutterBottom component="div" sx={{ p: 2, pb: 0 }}>
+      {/* <Typography variant="h5" gutterBottom component="div" sx={{ p: 2, pb: 0 }}>
           Inbox
         </Typography> */}
-        {/* <List sx={{ mb: 2 }}>
+      {/* <List sx={{ mb: 2 }}>
           {messages.map(({ id, primary, secondary, person }) => (
             <React.Fragment key={id}>
               {id === 1 && (
@@ -61,7 +66,7 @@ export default function Footer() {
           ))}
         </List> */}
       {/* </Paper> */}
-      <AppBar position="fixed"  sx={{ top: 'auto', bottom: 0, marginTop: "50px" }}>
+      <AppBar position="fixed" sx={{ top: 'auto', bottom: 0, marginTop: "50px" }}>
         <Toolbar id="footer">
           {/* <IconButton color="inherit" aria-label="open drawer">
             <MenuIcon />
@@ -69,7 +74,13 @@ export default function Footer() {
           <StyledFab color="secondary" aria-label="add">
             <AddIcon />
           </StyledFab> */}
-          <Box sx={{ flexGrow: 1 }} style={{ display: "flex", justifyContent: "center" }}>
+          <Box sx={{ flexGrow: 1 }} style={{ display: "flex", justifyContent: "center" }} flexDirection="column">
+            <div id="contact-img">
+              <a href="mailto:angie@anakela.com" title="Send me a message!" target="_blank" rel="noopener noreferrer"><img id="email" src={Email} alt="Email me!" /></a>
+              <a href="https://www.linkedin.com/in/anakela/" title="View my LinkedIn profile!" target="_blank" rel="noopener noreferrer"><img id="linked-in" src={LinkedIn} alt="Connect with me on LinkedIn!" /></a>
+              <a href="https://github.com/anakela" title="Check me out on GitHub!" target="_blank" rel="noopener noreferrer"><img id="github" src={GitHub} alt="Look me up on GitHub!" /></a>
+              <a href="https://www.deviantart.com/red-rogue-angel" title="Check out my earlier works of art here!" target="_blank" rel="noopener noreferrer"><img id="dev-art" src={DA} alt="Check out my art at DA!" /></a>
+            </div>
             <p>Angela Soto &copy; 2022</p>
           </Box>
           {/* <IconButton color="inherit">

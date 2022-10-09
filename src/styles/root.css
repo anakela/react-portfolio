@@ -54,12 +54,20 @@ body p, ul, li {
             var(--dark-green),
             var(--dark-purp));
     border-top: 5px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #footer p {
     font-family: reklame-script, sans-serif;
     font-weight: 700;
     font-style: normal;
+    margin: 5px;
+    /* display: flex;
+    align-items: center; */
+    text-align: center;
 }
 
 h1, h2 {
@@ -95,27 +103,31 @@ h1, h2 {
 #contact-img {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 
 #contact-img img {
     border-radius: 50%;
+    background-color: #fff;
+    width: 50px;
+    margin: 5px;
 }
 
 #email {
-    border: 5px solid var(--dark-pink);
+    border: 3px solid var(--dark-pink);
 }
 
 #linked-in {
-    border: 5px solid var(--dark-yell);
+    border: 3px solid var(--dark-yell);
 }
 
 #github {
-    border: 5px solid var(--dark-green);
+    border: 3px solid var(--dark-green);
 }
 
 #dev-art {
-    border: 5px solid var(--dark-purp);
+    border: 3px solid var(--dark-purp);
 }
 
 .card {
