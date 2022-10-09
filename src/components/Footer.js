@@ -81,7 +81,6 @@ export default function Footer() {
               <a href="https://github.com/anakela" title="Check me out on GitHub!" target="_blank" rel="noopener noreferrer"><img id="github" src={GitHub} alt="Look me up on GitHub!" /></a>
               <a href="https://www.deviantart.com/red-rogue-angel" title="Check out my earlier works of art here!" target="_blank" rel="noopener noreferrer"><img id="dev-art" src={DA} alt="Check out my art at DA!" /></a>
             </div>
-            <p>Angela Soto &copy; 2022</p>
           </Box>
           {/* <IconButton color="inherit">
             <SearchIcon />

@@ -15,6 +15,26 @@ export default function Contact() {
             </p>
 
             <FormControl>
+                <TextField
+                    id="margin-none"
+                    label="Name"
+                    color="secondary"
+                    focused
+                    style={{ m: 1, width: '100%' }}
+                />
+                <TextField
+                    id="outlined-basic"
+                    label="Email"
+                    color="secondary"
+                    focused
+                />
+                <TextField
+                    id="outlined-basic"
+                    label="Message"
+                    rows={4}
+                    color="secondary"
+                    focused
+                />
                 <InputLabel htmlFor="my-input">Email address</InputLabel>
                 <Input id="my-input" aria-describedby="my-helper-text" />
                 <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
@@ -34,7 +54,7 @@ export default function Contact() {
                 <TextField id="outlined-basic" label="Message" rows={4} color="secondary" focused />
             </Box>
 
-            
+
         </div>
     );
 }
