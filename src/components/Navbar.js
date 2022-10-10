@@ -11,15 +11,6 @@ export default function Navbar({ handlePageChange }) {
         <Box sx={{ flexGrow: 1, width: "100%" }} >
             <AppBar position="static" id="navbar">
                 <Toolbar>
-                    {/* <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                    > */}
-                    {/* <MenuIcon /> */}
-                    {/* </IconButton> */}
                     <Typography
                         id="nav-logo"
                         variant="h6"
@@ -28,7 +19,6 @@ export default function Navbar({ handlePageChange }) {
                         fontFamily="reklame-script, sans-serif"
                         fontWeight="700"
                         fontStyle="normal"
-                        // color="black"
                         fontSize="36px"
                         onClick={() => handlePageChange('About')}
                     >

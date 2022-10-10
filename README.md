@@ -72,71 +72,135 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 ![](./public/assets/images/screenshots/portfolio-screenshot.png)
 ![](./public/assets/images/screenshots/contact-me-screenshot.png)
 ![](./public/assets/images/screenshots/resume-screenshot.png)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./public/assets/images/screenshots/about-me-mobile.png)
+![](./public/assets/images/screenshots/portfolio-mobile.png)
+![](./public/assets/images/screenshots/contact-mobile.png)
+![](./public/assets/images/screenshots/resume-mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/anakela/react-portfolio](https://github.com/anakela/react-portfolio)
+- Live Site URL: [https://anakela.github.io/react-portfolio/](https://anakela.github.io/react-portfolio/)
 
 ## My Process
 
 ### Built With
 
-- Semantic HTML5 markup
+- React.js
+- Node.js
+- JavaScript
 - CSS
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Material UI](https://mui.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [Adobe Fonts](https://fonts.adobe.com/)
 
 ### What I Learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I really enjoyed bringing this portfolio to life using React.  One of the interesting things I learned during this challenge was that because this application is front-end only, I was unable to use React Router to build its navigation.  Rather, I created the navigation using `useState`.
 
-To see how you can add code snippets, see below:
+```JavaScript
+export default function PortfolioContainer() {
+    const [currentPage, setCurrentPage] = useState('');
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+    const renderPage = () => {
+        if (currentPage === 'Resume') {
+            return <Resume />;
+        }
+        if (currentPage === 'Portfolio') {
+            return <Portfolio />;
+        }
+        if (currentPage === 'Contact') {
+            return <Contact />;
+        }
+        if (currentPage === 'About') {
+            return <About />
+        }
+        return <About />;
+    };
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+I also initially created a `ul` for the navigation, but updated it with buttons formatted using Material UI:
+
+```JavaScript
+export default function Navbar({ handlePageChange }) {
+    return (
+        <Box sx={{ flexGrow: 1, width: "100%" }} >
+            <AppBar position="static" id="navbar">
+                <Toolbar>
+                    <Typography
+                        id="nav-logo"
+                        variant="h6"
+                        component="div"
+                        sx={{ flexGrow: 1 }}
+                        fontFamily="reklame-script, sans-serif"
+                        fontWeight="700"
+                        fontStyle="normal"
+                        fontSize="36px"
+                        onClick={() => handlePageChange('About')}
+                    >
+                        Angela Soto's Portfolio
+                    </Typography>
+                    <div
+                        style={{ display: "flex", direction: "row", flexWrap: "wrap", justifyContent: "space-evenly", alignContent: "center", fontWeight: "bold" }}
+                    >
+                        <Button
+                            color="inherit"
+                            onClick={() => handlePageChange('About')}
+                        >
+                            About Me
+                        </Button>
+                        <Button
+                            color="inherit"
+                            onClick={() => handlePageChange('Portfolio')}
+                        >
+                            Portfolio
+                        </Button>
+                        <Button
+                            color="inherit"
+                            onClick={() => handlePageChange('Contact')}
+                        >
+                            Contact Me
+                        </Button>
+                        <Button
+                            color="inherit"
+                            onClick={() => handlePageChange('Resume')}
+                        >
+                            Resume
+                        </Button>
+                    </div>
+                </Toolbar>
+            </AppBar>
+        </Box>
+    );
 ```
-
-If you want more help with writing markdown, check out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued Development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Moving forward, there are several more updates I would like to make.
+- First, I would like to add a back-end to my React portfolio so that I can make the Contact form work and validate correctly.
+- I will also be updating the Resume page with real information once I consult with the Careers Department.
+- Lastly, I would like to add more internal links so that I can better reference different pages within one another.
 
 ### Useful Resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Adobe Fonts: Reklame Script](https://fonts.adobe.com/fonts/reklame-script)
+- [Emojipedia](emojipedia.comemojipedia.com)
+- [Google Fonts](https://fonts.google.com/specimen/Poppins?query=poppins)
+- [Material UI](https://mui.com/material-ui/getting-started/overview/)
+- [PluralSight: How to Render <a> with Optional href in React](https://www.pluralsight.com/guides/how-to-render-%22a%22-with-optional-href-in-react)
+- [Regexr.com](https://regexr.com/)
+- [StackOverflow: How to change background color in react materialUI card](https://stackoverflow.com/questions/58799624/how-to-change-background-color-in-react-materialui-card)
+- [W3Schools: Linear Gradients With Transparency](https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_trans)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- GitHub - [https://github.com/anakela](https://github.com/anakela)
+- LinkedIn - [https://www.linkedin.com/in/anakela/](https://www.linkedin.com/in/anakela/)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Bobbi Tarkany (Tutor)
+- Scott Nelson (TA)
+- Fellow Bootcampers:
+    - Asha Chakre
+    - Nolan Spence
