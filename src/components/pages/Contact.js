@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useRef } from 'react';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -8,6 +8,7 @@ import Input from '@mui/material/Input';
 import FormHelperText from '@mui/material/FormHelperText';
 import { Container, Paper, Stack, Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+import emailjs from '@emailjs/browser';
 
 import Email from '../images/logos/email-icon.png';
 import LinkedIn from '../images/logos/li-icon.png';
@@ -95,6 +96,19 @@ export default function Contact() {
     //     setIsSubmit(true);
     // };
 
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('resume_contact', 'resume_contact', form.current, '8P-bozAqzxfeeNnd0')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
     return (
         <div className='main-container'>
             <h2 id="contact-header">Get in Touch</h2>
@@ -102,31 +116,41 @@ export default function Contact() {
                 I love connecting with people!  Please feel free to reach out to me using any of the means below.
             </p>
             <Container maxWidth="lg">
-            <div id="contact-img">
-              <a href="mailto:angie@anakela.com" title="Send me a message!" target="_blank" rel="noopener noreferrer"><img id="email" src={Email} alt="Email me!" /></a>
-              <a href="https://www.linkedin.com/in/anakela/" title="View my LinkedIn profile!" target="_blank" rel="noopener noreferrer"><img id="linked-in" src={LinkedIn} alt="Connect with me on LinkedIn!" /></a>
-              <a href="https://github.com/anakela" title="Check me out on GitHub!" target="_blank" rel="noopener noreferrer"><img id="github" src={GitHub} alt="Look me up on GitHub!" /></a>
-              <a href="https://www.deviantart.com/red-rogue-angel" title="Check out my earlier works of art here!" target="_blank" rel="noopener noreferrer"><img id="dev-art" src={DA} alt="Check out my art at DA!" /></a>
-            </div>
+                <div id="contact-img">
+                    <a href="mailto:angie@anakela.com" title="Send me a message!" target="_blank" rel="noopener noreferrer"><img id="email" src={Email} alt="Email me!" /></a>
+                    <a href="https://www.linkedin.com/in/anakela/" title="View my LinkedIn profile!" target="_blank" rel="noopener noreferrer"><img id="linked-in" src={LinkedIn} alt="Connect with me on LinkedIn!" /></a>
+                    <a href="https://github.com/anakela" title="Check me out on GitHub!" target="_blank" rel="noopener noreferrer"><img id="github" src={GitHub} alt="Look me up on GitHub!" /></a>
+                    <a href="https://www.deviantart.com/red-rogue-angel" title="Check out my earlier works of art here!" target="_blank" rel="noopener noreferrer"><img id="dev-art" src={DA} alt="Check out my art at DA!" /></a>
+                </div>
                 <h3>Send Me a Message</h3>
                 <p>Complete the form below to send me an email.</p>
                 <Paper elevation={3} sx={{ padding: 1, marginTop: 3 }}>
 
                     <Box
-                        component="form"
-                        sx={{
-                            "& > :not(style)": { width: "100%" },
-                            maxWidth: '100%',
-                        }}
-                        noValidate
-                        autoComplete="off"
+                        // component="form"
+                        // sx={{
+                        //     "& > :not(style)": { width: "100%" },
+                        //     maxWidth: '100%',
+                        // }}
+                        // noValidate
+                        // autoComplete="off"
                     >
-                        <TextField
+                        <form ref={form} onSubmit={sendEmail}>
+                            <label>Name</label>
+                            <input type="text" name="user_name" />
+                            <label>Email</label>
+                            <input type="email" name="user_email" />
+                            <label>Message</label>
+                            <textarea name="message" />
+                            <input type="submit" value="Send Email" />
+                        </form>
+                        {/* <TextField
                             sx={{ my: 1 }}
                             required
                             id="outlined-basic"
                             label="Name"
                             variant="outlined"
+                            type="text"
                             name="name"
                         // onChange={handleInputChange}
                         // helperText={errorMessages.name}
@@ -139,6 +163,7 @@ export default function Contact() {
                             id="outlined-basic"
                             label="Email"
                             variant="outlined"
+                            type="email"
                             name="email"
                         // onChange={handleInputChange}
                         // helperText={errorMessages.email}
@@ -157,9 +182,9 @@ export default function Contact() {
                         // helperText={errorMessages.message}
                         // value={contactFormData.message}
                         // error={formErrors.message}
-                        />
+                        /> */}
                     </Box>
-                    <Stack
+                    {/* <Stack
                         direction="row"
                         spacing={2}
                         justifyContent="center"
@@ -168,12 +193,13 @@ export default function Contact() {
                             sx={{ my: 2 }}
                             variant="contained"
                             type="button"
+                            // value="Send"
                             style={{ backgroundColor: "#000", fontFamily: "'Poppins', san-serif" }}
                         // onClick={handleFormSubmit}
                         >
                             Send Email
                         </Button>
-                    </Stack>
+                    </Stack> */}
                 </Paper>
             </Container>
         </div>
