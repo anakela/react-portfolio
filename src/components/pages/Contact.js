@@ -128,21 +128,61 @@ export default function Contact() {
 
                     <Box
                         // component="form"
-                        // sx={{
-                        //     "& > :not(style)": { width: "100%" },
-                        //     maxWidth: '100%',
-                        // }}
-                        // noValidate
-                        // autoComplete="off"
+                        sx={{
+                            "& > :not(style)": { width: "100%" },
+                            maxWidth: '100%',
+                        }}
+                    // noValidate
+                    // autoComplete="off"
                     >
-                        <form ref={form} onSubmit={sendEmail}>
-                            <label>Name</label>
-                            <input type="text" name="user_name" />
-                            <label>Email</label>
-                            <input type="email" name="user_email" />
-                            <label>Message</label>
+                        <form ref={form} onSubmit={sendEmail} id="contact-form">
+                            <TextField
+                                sx={{ my: 1 }}
+                                required
+                                id="outlined-basic"
+                                label="Name"
+                                variant="outlined"
+                                type="text"
+                                name="user_name"
+                            />
+                            <TextField
+                                sx={{ my: 1 }}
+                                required
+                                id="outlined-basic"
+                                label="Email"
+                                variant="outlined"
+                                type="email"
+                                name="user_email"
+                                inputMode='email'
+                            // onChange={handleInputChange}
+                            // helperText={errorMessages.email}
+                            // value={contactFormData.email}
+                            // error={formErrors.email}
+                            />
+                            <TextField
+                                sx={{ my: 1 }}
+                                required
+                                id="outlined-basic"
+                                label="Message"
+                                variant="outlined"
+                                name="message"
+                                rows={4}
+                            // onChange={handleInputChange}
+                            // helperText={errorMessages.message}
+                            // value={contactFormData.message}
+                            // error={formErrors.message}
+                            />
+                            <input type="submit" value="Send Email" id="contact-btn" />
+
+
+                            {/* <label>Name</label>
+                            <input type="text" name="user_name" /> */}
+                            {/* <label>Email</label>
+                            <input type="email" name="user_email" /> */}
+
+                            {/* <label>Message</label>
                             <textarea name="message" />
-                            <input type="submit" value="Send Email" />
+                            <input type="submit" value="Send Email" /> */}
                         </form>
                         {/* <TextField
                             sx={{ my: 1 }}
@@ -151,7 +191,8 @@ export default function Contact() {
                             label="Name"
                             variant="outlined"
                             type="text"
-                            name="name"
+                            name="user_name"
+                            inputMode='text'
                         // onChange={handleInputChange}
                         // helperText={errorMessages.name}
                         // value={contactFormData.name}
@@ -164,7 +205,8 @@ export default function Contact() {
                             label="Email"
                             variant="outlined"
                             type="email"
-                            name="email"
+                            name="user_email"
+                            inputMode='email'
                         // onChange={handleInputChange}
                         // helperText={errorMessages.email}
                         // value={contactFormData.email}
@@ -192,9 +234,10 @@ export default function Contact() {
                         <Button
                             sx={{ my: 2 }}
                             variant="contained"
-                            type="button"
+                            type="submit"
                             // value="Send"
                             style={{ backgroundColor: "#000", fontFamily: "'Poppins', san-serif" }}
+                            onSubmit={{ sendEmail }}
                         // onClick={handleFormSubmit}
                         >
                             Send Email
