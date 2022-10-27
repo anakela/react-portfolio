@@ -1,13 +1,7 @@
 import React, { useRef } from 'react';
-import { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import Input from '@mui/material/Input';
-import FormHelperText from '@mui/material/FormHelperText';
-import { Container, Paper, Stack, Button } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
+import { Container, Paper } from '@mui/material';
 import emailjs from '@emailjs/browser';
 
 import Email from '../images/logos/email-icon.png';
@@ -173,76 +167,8 @@ export default function Contact() {
                             // error={formErrors.message}
                             />
                             <input type="submit" value="Send Email" id="contact-btn" />
-
-
-                            {/* <label>Name</label>
-                            <input type="text" name="user_name" /> */}
-                            {/* <label>Email</label>
-                            <input type="email" name="user_email" /> */}
-
-                            {/* <label>Message</label>
-                            <textarea name="message" />
-                            <input type="submit" value="Send Email" /> */}
                         </form>
-                        {/* <TextField
-                            sx={{ my: 1 }}
-                            required
-                            id="outlined-basic"
-                            label="Name"
-                            variant="outlined"
-                            type="text"
-                            name="user_name"
-                            inputMode='text'
-                        // onChange={handleInputChange}
-                        // helperText={errorMessages.name}
-                        // value={contactFormData.name}
-                        // error={formErrors.name}
-                        />
-                        <TextField
-                            sx={{ my: 1 }}
-                            required
-                            id="outlined-basic"
-                            label="Email"
-                            variant="outlined"
-                            type="email"
-                            name="user_email"
-                            inputMode='email'
-                        // onChange={handleInputChange}
-                        // helperText={errorMessages.email}
-                        // value={contactFormData.email}
-                        // error={formErrors.email}
-                        />
-                        <TextField
-                            sx={{ my: 1 }}
-                            required
-                            id="outlined-basic"
-                            label="Message"
-                            variant="outlined"
-                            name="message"
-                            rows={4}
-                        // onChange={handleInputChange}
-                        // helperText={errorMessages.message}
-                        // value={contactFormData.message}
-                        // error={formErrors.message}
-                        /> */}
                     </Box>
-                    {/* <Stack
-                        direction="row"
-                        spacing={2}
-                        justifyContent="center"
-                    >
-                        <Button
-                            sx={{ my: 2 }}
-                            variant="contained"
-                            type="submit"
-                            // value="Send"
-                            style={{ backgroundColor: "#000", fontFamily: "'Poppins', san-serif" }}
-                            onSubmit={{ sendEmail }}
-                        // onClick={handleFormSubmit}
-                        >
-                            Send Email
-                        </Button>
-                    </Stack> */}
                 </Paper>
             </Container>
         </div>
