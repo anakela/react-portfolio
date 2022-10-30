@@ -171,7 +171,6 @@ export default function Contact() {
                                 value={contactFormData.message}
                                 error={formErrors.message}
                             />
-                            {/* <input type="submit" value="Send Email" id="contact-btn" /> */}
                             <Stack
                                 direction="row"
                                 spacing={2}
@@ -182,7 +181,6 @@ export default function Contact() {
                                     variant="contained"
                                     type="button"
                                     onClick={handleFormSubmit}
-                                // value="Send Email"
                                 >
                                     Send Email
                                 </Button>
