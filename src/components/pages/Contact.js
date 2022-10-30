@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { Container, Paper } from '@mui/material';
+import { Container, Paper, Stack, Button } from '@mui/material';
 import emailjs from '@emailjs/browser';
 
 import Email from '../images/logos/email-icon.png';
@@ -10,91 +10,93 @@ import GitHub from '../images/logos/gh-icon.png';
 import DA from '../images/logos/da-icon.png';
 
 export default function Contact() {
-    // const [formErrors, setFormErrors] = React.useState({
-    //     name: false,
-    //     email: false,
-    //     message: false,
-    // });
+    const [formErrors, setFormErrors] = React.useState({
+        user_name: false,
+        user_email: false,
+        message: false,
+    });
 
-    // const [errorMessages, setErrorMessages] = React.useState({
-    //     name: '',
-    //     email: '',
-    //     message: '',
-    // });
+    const [errorMessages, setErrorMessages] = React.useState({
+        user_name: '',
+        user_email: '',
+        message: '',
+    });
 
-    // const [isSubmit, setIsSubmit] = React.useState(false);
-    // const [contactFormData, setContactFormData] = React.useState({
-    //     name: '',
-    //     email: '',
-    //     message: '',
-    // });
+    const [isSubmit, setIsSubmit] = React.useState(false);
+    const [contactFormData, setContactFormData] = React.useState({
+        user_name: '',
+        user_email: '',
+        message: '',
+    });
 
-    // const handleInputChange = (event) => {
-    //     event.preventDefault();
-    //     const { name, value } = event.target;
-    //     setFormErrors({
-    //         ...formErrors,
-    //         [name]: false,
-    //     });
-    //     setErrorMessages({
-    //         ...errorMessages,
-    //         [name]: false,
-    //     });
-    // };
+    const handleInputChange = (event) => {
+        event.preventDefault();
+        const { name, value } = event.target;
+        setFormErrors({
+            ...formErrors,
+            [name]: false,
+        });
+        setContactFormData({
+            ...contactFormData,
+            [name]: value,
+        });
+    };
 
-    // const checkEmail = (email) => {
-    //     const emailErrors = {
-    //         email: false,
-    //         emailMessage: false,
-    //     }
+    const checkEmail = (email) => {
+        const emailErrors = {}
 
-    //     const regexEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+        const regexEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
 
-    //     if (!email) {
-    //         emailErrors.emailMessage = "Email is required."
-    //     } else if (!regexEmail.test(email)) {
-    //         emailErrors.emailMessage = "Please enter a valid email address."
-    //     }
-    //     return emailErrors;
-    // };
+        if (!email) {
+            emailErrors.emailMessage = "Email is required."
+        } else if (!regexEmail.test(email)) {
+            emailErrors.emailMessage = "Please enter a valid email address."
+        }
 
-    // const validate = (values) => {
-    //     const passErrors = {};
-    //     const newFormErrors = {};
+        return emailErrors;
+    };
 
-    //     const checkEmailErrors = checkEmail(values.email);
-    //     newFormErrors.email = checkEmailErrors.email;
+    const validate = (values) => {
+        const passErrors = {};
+        const newFormErrors = {};
 
-    //     if (checkEmailErrors.emailMessage) passErrors.email = checkEmailErrors.emailMessage;
+        const checkEmailErrors = checkEmail(values.user_email);
+        newFormErrors.user_email = checkEmailErrors.email;
 
-    //     if (!values.name) {
-    //         newFormErrors.name = true;
-    //         passErrors.name = "Please enter your name."
-    //     }
-    //     if (!values.email) {
-    //         newFormErrors.email = true;
-    //         passErrors.email = "Please enter your email address."
-    //     }
-    //     if (!values.message) {
-    //         newFormErrors.message = true;
-    //         passErrors.message = "Please enter a message."
-    //     }
-    //     setFormErrors({...newFormErrors});
-    //     setErrorMessages({...errorMessages, ...passErrors});
-    //     return passErrors;
-    // };
+        if (checkEmailErrors.emailMessage) {
+            passErrors.user_email = checkEmailErrors.emailMessage;
+            newFormErrors.user_email = true;
+        }
+        console.log(passErrors);
 
-    // const handleFormSubmit = async (event) => {
-    //     event.preventDefault();
-    //     validate(contactFormData);
-    //     setIsSubmit(true);
-    // };
+        if (!values.user_name) {
+            newFormErrors.user_name = true;
+            passErrors.user_name = "Please enter your name."
+        }
+        if (!values.message) {
+            newFormErrors.message = true;
+            passErrors.message = "Please enter a message."
+        }
+        setFormErrors({ ...formErrors, ...newFormErrors });
+        setErrorMessages({ ...errorMessages, ...passErrors });
+        return passErrors;
+    };
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        const passErrors = validate(contactFormData);
+        console.log(passErrors, 'Inside handleFormSubmit.');
+        if (Object.keys(passErrors).length > 0) {
+            console.log('Returning validation errors.');
+            return;
+        }
+        setIsSubmit(true);
+        sendEmail();
+    };
 
     const form = useRef();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-
+    const sendEmail = () => {
         emailjs.sendForm('resume_contact', 'resume_contact', form.current, '8P-bozAqzxfeeNnd0')
             .then((result) => {
                 console.log(result.text);
@@ -121,13 +123,11 @@ export default function Contact() {
                 <Paper elevation={3} sx={{ padding: 1, marginTop: 3 }}>
 
                     <Box
-                        // component="form"
                         sx={{
                             "& > :not(style)": { width: "100%" },
                             maxWidth: '100%',
                         }}
-                    // noValidate
-                    // autoComplete="off"
+                        autoComplete="on"
                     >
                         <form ref={form} onSubmit={sendEmail} id="contact-form">
                             <TextField
@@ -138,6 +138,10 @@ export default function Contact() {
                                 variant="outlined"
                                 type="text"
                                 name="user_name"
+                                onChange={handleInputChange}
+                                helperText={errorMessages.user_name}
+                                value={contactFormData.user_name}
+                                error={formErrors.user_name}
                             />
                             <TextField
                                 sx={{ my: 1 }}
@@ -148,25 +152,41 @@ export default function Contact() {
                                 type="email"
                                 name="user_email"
                                 inputMode='email'
-                            // onChange={handleInputChange}
-                            // helperText={errorMessages.email}
-                            // value={contactFormData.email}
-                            // error={formErrors.email}
+                                onChange={handleInputChange}
+                                helperText={errorMessages.user_email}
+                                value={contactFormData.user_email}
+                                error={formErrors.user_email}
                             />
                             <TextField
                                 sx={{ my: 1 }}
                                 required
+                                multiline
                                 id="outlined-basic"
                                 label="Message"
                                 variant="outlined"
                                 name="message"
                                 rows={4}
-                            // onChange={handleInputChange}
-                            // helperText={errorMessages.message}
-                            // value={contactFormData.message}
-                            // error={formErrors.message}
+                                onChange={handleInputChange}
+                                helperText={errorMessages.message}
+                                value={contactFormData.message}
+                                error={formErrors.message}
                             />
-                            <input type="submit" value="Send Email" id="contact-btn" />
+                            {/* <input type="submit" value="Send Email" id="contact-btn" /> */}
+                            <Stack
+                                direction="row"
+                                spacing={2}
+                                justifyContent="center"
+                            >
+                                <Button
+                                    sx={{ my: 2 }}
+                                    variant="contained"
+                                    type="button"
+                                    onClick={handleFormSubmit}
+                                // value="Send Email"
+                                >
+                                    Send Email
+                                </Button>
+                            </Stack>
                         </form>
                     </Box>
                 </Paper>
