@@ -92,6 +92,12 @@ export default function Contact() {
         }
         setIsSubmit(true);
         sendEmail();
+        // Clear fields after successful submission.
+        setContactFormData({
+            user_name: '',
+            user_email: '',
+            message: '',
+        });
     };
 
     const form = useRef();
