@@ -32,6 +32,7 @@ export default function Contact() {
         message: '',
     });
 
+    // Modal settings
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -59,7 +60,6 @@ export default function Contact() {
         } else if (!regexEmail.test(email)) {
             emailErrors.emailMessage = "Please enter a valid email address."
         }
-
         return emailErrors;
     };
 
@@ -135,7 +135,6 @@ export default function Contact() {
                 <h3>Send Me a Message</h3>
                 <p>Complete the form below to send me an email.</p>
                 <Paper elevation={3} sx={{ padding: 1, marginTop: 3 }}>
-
                     <Box
                         sx={{
                             "& > :not(style)": { width: "100%" },
@@ -226,11 +225,11 @@ export default function Contact() {
                                     boxShadow: 24,
                                     p: 4,
                                 }}>
-                                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                                        Your email has been sent! <SendIcon />
+                                    <Typography id="modal-modal-title" variant="h6" component="h2" style={{ textAlign: "center", fontFamily: "reklame-script, sans-serif" }}>
+                                        Your email has been sent!
                                     </Typography>
-                                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                        Mahalo for your email!  I'll get back to you within 24-48 hours.
+                                    <Typography id="modal-modal-description" sx={{ mt: 2 }} style={{ fontFamily: "'Poppins', sans-serif"}}>
+                                        Mahalo for your message! 📧 I'll be sure to get back to you within 24-48 hours.
                                     </Typography>
                                 </Box>
                             </Modal>

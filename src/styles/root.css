@@ -72,7 +72,7 @@ h1, h2 {
     font-size: 32px;
 }
 
-h2 {
+.main-container > h2 {
     border-radius: 10px;
     padding-left: 15px;
 }
@@ -107,17 +107,6 @@ h3 {
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
-}
-
-#contact-btn {
-    width: 100px;
-    height: 50px;
-    background-color: #000;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    align-self: center;
-    border: none;
-    border-radius: 10px;
 }
 
 #contact-img {
