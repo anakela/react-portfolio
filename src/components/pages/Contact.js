@@ -2,6 +2,9 @@ import React, { useRef } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Container, Paper, Stack, Button } from '@mui/material';
+import Modal from '@mui/material/Modal';
+import Typography from '@mui/material/Typography';
+import SendIcon from '@mui/icons-material/Send';
 import emailjs from '@emailjs/browser';
 
 import Email from '../images/logos/email-icon.png';
@@ -28,6 +31,10 @@ export default function Contact() {
         user_email: '',
         message: '',
     });
+
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     const handleInputChange = (event) => {
         event.preventDefault();
@@ -92,6 +99,7 @@ export default function Contact() {
         }
         setIsSubmit(true);
         sendEmail();
+        handleOpen();
         // Clear fields after successful submission.
         setContactFormData({
             user_name: '',
@@ -184,14 +192,49 @@ export default function Contact() {
                             >
                                 <Button
                                     sx={{ my: 2 }}
+                                    style={{
+                                        color: "#fff",
+                                        backgroundColor: "#000"
+                                    }}
                                     variant="contained"
                                     type="button"
                                     onClick={handleFormSubmit}
                                 >
                                     Send Email
+                                    <SendIcon
+                                        style={{ marginLeft: "5px" }}
+                                    />
                                 </Button>
                             </Stack>
                         </form>
+                        <div>
+                            {/* <Button onClick={handleOpen}>Open modal</Button> */}
+                            <Modal
+                                open={open}
+                                onClose={handleClose}
+                                aria-labelledby="modal-modal-title"
+                                aria-describedby="modal-modal-description"
+                            >
+                                <Box sx={{
+                                    position: 'absolute',
+                                    top: '50%',
+                                    left: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    width: 400,
+                                    bgcolor: 'background.paper',
+                                    border: '2px solid #000',
+                                    boxShadow: 24,
+                                    p: 4,
+                                }}>
+                                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                                        Your email has been sent! <SendIcon />
+                                    </Typography>
+                                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                        Mahalo for your email!  I'll get back to you within 24-48 hours.
+                                    </Typography>
+                                </Box>
+                            </Modal>
+                        </div>
                     </Box>
                 </Paper>
             </Container>
