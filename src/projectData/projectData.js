@@ -24,7 +24,7 @@ export const projects = [
         title: "PWA Text Editor",
         github: "https://github.com/anakela/pwa-text-editor",
         deployedSite: "https://anakela-text-editor.herokuapp.com/",
-        image: "https://drive.google.com/d/1LYXx45oiONsxvYb7OZ01SZbTy7GWs0u6/view?usp=sharing",
+        image: "https://drive.google.com/uc?id=1A0FQ_UcrNm3F4dBfWKPcpaHvMRxfaVrj",
         description: "A text editor that utilizes PWA and service workers to work both on and offline.  Can be installed locally as an app as well.",
     },
     {
