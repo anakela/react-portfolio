@@ -2,7 +2,7 @@ export const projects = [
     {
         title: "Bone Buddies by Team Turcrickeseal",
         github: "https://github.com/Unicorn-Barf/Doggy_Dating",
-        deployedSite: "https://dev-bone-buddies.herokuapp.com/",
+        deployedSite: "https://bonebuddies.onrender.com/",
         image: "https://drive.google.com/uc?id=1VWZMSgIa3V4vL42Y1kQZ6d2ZC0xUmUgb",
         description: "An app for dog owners to find and interact with dog owners and dog playmates for their dogs.",
     },
