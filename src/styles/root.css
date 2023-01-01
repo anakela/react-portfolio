@@ -65,23 +65,34 @@ body p, ul, li {
     text-align: center;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
     font-family: reklame-script, sans-serif;
-    font-weight: 700;
     font-style: normal;
+}
+
+h1, h2 {
+    font-weight: 700;
     font-size: 32px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+h5 {
+    font-weight: 300;
+    font-size: 20px;
 }
 
 .main-container > h2 {
     border-radius: 10px;
     padding-left: 15px;
-}
-
-h3 {
-    font-family: reklame-script, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 28px;
 }
 
 .main-container {
@@ -191,4 +202,10 @@ h3 {
 
 .card:hover {
     border: 5px solid var(--dark-green);
+}
+
+hr {
+    height: 1px;
+    background-color: var(--dark-yell);
+    border: none;
 }
