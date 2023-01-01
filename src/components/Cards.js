@@ -41,8 +41,11 @@ export default function ProjectCard({ title, github, deployedSite, image, descri
                                 href={github}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className='card-btn'
                             >
-                                <Button size="small">
+                                <Button
+                                    style={{ textAlign: "center", backgroundColor: "#000", color: "#fff", textDecoration: "none", fontFamily: "'Poppins', sans-serif", margin: "10px", padding: "10px" }}
+                                >
                                     GitHub Repo
                                 </Button>
                             </CardActionArea>
@@ -50,8 +53,11 @@ export default function ProjectCard({ title, github, deployedSite, image, descri
                                 href={deployedSite}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className='card-btn'
                             >
-                                <Button size="small">
+                                <Button
+                                    style={{ textAlign: "center", backgroundColor: "#000", color: "#fff", textDecoration: "none", fontFamily: "'Poppins', sans-serif", margin: "10px", padding: "10px" }}
+                                >
                                     Deployed Site
                                 </Button>
                             </CardActionArea>

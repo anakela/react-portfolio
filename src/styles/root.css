@@ -185,6 +185,10 @@ h3 {
     text-align: center;
 }
 
+.card-btn {
+    text-align: center !important;
+}
+
 .card:hover {
     border: 5px solid var(--dark-green);
 }
