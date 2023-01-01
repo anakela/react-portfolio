@@ -34,4 +34,11 @@ export const projects = [
         image: "https://drive.google.com/uc?id=1rdHxvwhf9UrM2PA_YhBL_9hYuZYmLLtC",
         description: "A blog that allows users to sign in, sign up, sign out, create blogs, delete blogs, add comments to blog entries, and delete the comments they've posted.",
     },
+    {
+        title: "Siddartha: Seeker of Truth Website",
+        github: "https://github.com/anakela/siddhartha-front-end",
+        deployedSite: "https://siddharthaseekeroftruth.com/",
+        image: "https://drive.google.com/uc?id=1N23BW8qF9YMsjBGlrAxk33OOBLH4Vxeu",
+        description: "A react website for the Greg Shepherd musical Siddhartha: Seeker of Truth."
+    }
 ];
