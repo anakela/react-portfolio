@@ -6,6 +6,8 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import Button from '@mui/material/Button';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import DevicesIcon from '@mui/icons-material/Devices';
 import '../styles/root.css';
 
 export default function ProjectCard({ title, github, deployedSite, image, description }) {
@@ -18,11 +20,11 @@ export default function ProjectCard({ title, github, deployedSite, image, descri
                 sx={{ minWidth: 345, borderRadius: '10px', width: '100%' }}
                 style={{ border: "5px solid var(--dark-purp)" }}
             >
-                <CardActionArea
+                {/* <CardActionArea
                     href={github}
                     target="_blank"
                     rel='noopener noreferrer'
-                >
+                > */}
                     <CardMedia
                         component="img"
                         height="200"
@@ -46,6 +48,9 @@ export default function ProjectCard({ title, github, deployedSite, image, descri
                                 <Button
                                     style={{ textAlign: "center", backgroundColor: "#000", color: "#fff", textDecoration: "none", fontFamily: "'Poppins', sans-serif", margin: "10px", padding: "10px" }}
                                 >
+                                    <GitHubIcon
+                                        style={{ marginRight: "5px" }}
+                                    />
                                     GitHub Repo
                                 </Button>
                             </CardActionArea>
@@ -58,12 +63,15 @@ export default function ProjectCard({ title, github, deployedSite, image, descri
                                 <Button
                                     style={{ textAlign: "center", backgroundColor: "#000", color: "#fff", textDecoration: "none", fontFamily: "'Poppins', sans-serif", margin: "10px", padding: "10px" }}
                                 >
+                                    <DevicesIcon
+                                        style={{ marginRight: "5px" }}
+                                    />
                                     Deployed Site
                                 </Button>
                             </CardActionArea>
                         </CardActions>
                     </CardContent>
-                </CardActionArea>
+                {/* </CardActionArea> */}
             </Card>
         </Grid>
     )
