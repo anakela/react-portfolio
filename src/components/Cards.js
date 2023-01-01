@@ -1,9 +1,11 @@
 import React from 'react';
 import Card from '@mui/joy/Card';
 import { CardMedia, Grid } from '@mui/material';
+import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
+import Button from '@mui/material/Button';
 import '../styles/root.css';
 
 export default function ProjectCard({ title, github, deployedSite, image, description }) {
@@ -34,6 +36,26 @@ export default function ProjectCard({ title, github, deployedSite, image, descri
                         <Typography variant="body2" color="text.secondary">
                             {description}
                         </Typography>
+                        <CardActions>
+                            <CardActionArea
+                                href={github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button size="small">
+                                    GitHub Repo
+                                </Button>
+                            </CardActionArea>
+                            <CardActionArea
+                                href={deployedSite}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button size="small">
+                                    Deployed Site
+                                </Button>
+                            </CardActionArea>
+                        </CardActions>
                     </CardContent>
                 </CardActionArea>
             </Card>

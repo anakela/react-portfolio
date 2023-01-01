@@ -39,6 +39,6 @@ export const projects = [
         github: "https://github.com/anakela/siddhartha-front-end",
         deployedSite: "https://siddharthaseekeroftruth.com/",
         image: "https://drive.google.com/uc?id=1N23BW8qF9YMsjBGlrAxk33OOBLH4Vxeu",
-        description: "A react website for the Greg Shepherd musical Siddhartha: Seeker of Truth."
+        description: "A react website for the Greg Shepherd musical Siddhartha: Seeker of Truth. Users can find audition info, and will eventually be able to purchase tickets."
     }
 ];
