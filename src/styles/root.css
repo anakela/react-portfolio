@@ -39,6 +39,11 @@ body p, ul, li {
     font-size: 20px;
 }
 
+#navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
 #nav-logo:hover,
 #nav-logo:active {
     color: #000;
@@ -97,15 +102,16 @@ h5 {
 
 .main-container {
     margin: 0 50px;
+    padding-bottom: 100px;
 }
 
 #profilePhoto {
     border: 5px solid var(--light-green);
 }
 
-#portfolioContainer {
+/* #portfolio-container {
     margin-bottom: 100px;
-}
+} */
 
 #profilePhoto {
     border-radius: 50%;

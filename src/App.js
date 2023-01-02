@@ -9,7 +9,7 @@ import Resume from './pages/Resume';
 
 export default function App() {
   return (
-    <div className='App'>
+    // <div className='App'>
       <>
         <PortfolioContainer />
         <Routes>
@@ -36,6 +36,6 @@ export default function App() {
           />
         </Routes>
       </>
-    </div>
+    // </div>
   );
 }

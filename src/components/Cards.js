@@ -17,7 +17,7 @@ export default function ProjectCard({ title, github, deployedSite, image, descri
             <Card
                 variant="outlined"
                 className="card"
-                sx={{ minWidth: 345, borderRadius: '10px', width: '100%' }}
+                sx={{ minHeight: 500, minWidth: 345, borderRadius: '10px', width: '100%' }}
                 style={{ border: "5px solid var(--dark-purp)" }}
             >
                 {/* <CardActionArea
