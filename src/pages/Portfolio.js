@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Grid } from '@mui/material';
-import '../../styles/root.css';
-import ProjectCard from '../Cards';
-import { projects } from '../../projectData/projectData';
+import '../styles/root.css';
+import ProjectCard from '../components/Cards';
+import { projects } from '../projectData/projectData';
 
 export default function Work() {
     console.log(projects);

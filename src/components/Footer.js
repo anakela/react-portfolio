@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
-import Fab from '@mui/material/Fab';
 
 import Email from './images/logos/email-icon.png';
 import LinkedIn from './images/logos/li-icon.png';

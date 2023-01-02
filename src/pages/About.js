@@ -1,5 +1,5 @@
 import React from 'react';
-import Angie from '../images/angie-370px.png';
+import Angie from '../components/images/angie-370px.png';
 
 export default function About() {
     return (

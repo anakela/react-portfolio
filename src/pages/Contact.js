@@ -7,10 +7,10 @@ import Typography from '@mui/material/Typography';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from '@emailjs/browser';
 
-import Email from '../images/logos/email-icon.png';
-import LinkedIn from '../images/logos/li-icon.png';
-import GitHub from '../images/logos/gh-icon.png';
-import DA from '../images/logos/da-icon.png';
+import Email from '../components/images/logos/email-icon.png';
+import LinkedIn from '../components/images/logos/li-icon.png';
+import GitHub from '../components/images/logos/gh-icon.png';
+import DA from '../components/images/logos/da-icon.png';
 
 export default function Contact() {
     const [formErrors, setFormErrors] = React.useState({
